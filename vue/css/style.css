@@ -1,0 +1,240 @@
+/* remise a zéro des principaux éléments */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, section, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+h1,h2,h3{
+	font-weight: bold;
+}
+a{
+	text-decoration: none;
+	color: #5E5E5E;
+}
+ol ul li{
+list-style: none outside none;	
+}
+body{
+	background: url("../img/fond2.jpg") no-repeat center center fixed;
+	background-attachment: fixed;
+	background-position: center;
+	/* image fixe */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: Helvetica,sans-serif;
+}
+
+
+
+section{
+	margin: 0 auto;
+	width:900px;
+	height: 800;
+	margin-top: 10%
+}
+
+nav{
+    text-align: left;
+    padding-left : 20px ;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: -moz-linear-gradient(#ddd, #CACACA) repeat scroll 0 0 transparent;
+    font-size: 1em;
+    color: #5E5E5E;
+    text-shadow: 0 1px 0 #F0F0F0;
+    margin-bottom: 20px;
+}
+nav li {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+nav li a:hover {
+	color: #000;
+	cursor: pointer;
+}
+nav .menuGauche{
+	width: 700px;
+	margin-top:10px; 
+	padding-bottom: 10px;
+}
+nav .menuDroite{
+	position: relative;
+	width: 200px;
+	float: right;
+}
+nav .menuDroite img{
+	margin-top:10px; 
+}
+nav .util{
+	float: left;
+	margin-top: 0px;
+}
+nav .menu_jquerry{
+	height:3%;
+}
+nav .utilMenu{
+	position: absolute;
+	top: 175px;
+	left: 1100px;
+}
+
+nav #textlogin {
+top:-26px;
+position:relative;
+padding-left: 30px;
+}
+.menu_body {display:none; width:114px;border:1px solid #998675;padding-left:4px;padding-top:5px; font-size: 13px; }
+.menu_body li{height:25px;width: 114px; background:#FFFFFF;padding: 0;}
+.menu_body li a{color:#5E5E5E;; text-decoration:none; display:block;}
+.menu_body li a:hover{color: red;}
+.container{width:120px; height:50px;float: right;margin-top: -40px;margin-right: 10px;}
+ul.menu_body{position:relative;top:-26px; width:114px; border-radius: 3px;background:#FFFFFF; }
+
+
+article{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: -moz-linear-gradient(#CACACA, #909090) repeat scroll 0 0 transparent;
+    font-size: 1em;
+    color: #5E5E5E;
+    border: 1px solid #B2B2B2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+article .contenu{
+	margin: 20px;
+	width: 860px;
+}
+/* connexion */
+nav #Accueil{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+article #erreur{
+text-align: center;
+
+}
+
+article #erreur a:hover{
+	text-decoration: underline;
+        
+}
+/* accueil*/
+article .contenu #accP{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Coordonnées */
+article .topCoord{
+	padding-left: 275px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+	text-align: right; 
+}
+article td{
+	padding-bottom: 10px;
+}
+article td input{
+	margin-left: 15px;
+}
+
+article .separation{
+	margin-right: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top: 1px solid #cacaca;
+}
+article .submit{
+	margin-top: 10px;
+	margin-right: 450px;
+}
+/* Entreprise */
+article .topEnt{
+	margin-left:200px;
+}
+article .topEnt li{
+	margin-left: 30px;
+    padding: 5px;
+    position: relative;
+    list-style: none outside none;
+}
+
+/* Stage*/
+article .contenu2{
+	height: 450px;
+}
+
+article .contenu3{
+	height: 350px;
+}
+
+article #stageD{
+	position: relative;
+	width: 400px;
+	float: right;
+}
+article #stageG{
+	position: relative;
+	width: 400px;
+	float: left;
+}
+
+article #stageE{
+	position: relative;
+	width: 400px;
+        padding-left : 275px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+	float: left;
+}
+
+article .contenu2 h3{
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+article #stageG table{
+	margin-left: 20px;
+}
+
+#submit{
+color:#000000;
+-moz-box-shadow: 0px 0px 10px #000000;
+-webkit-box-shadow: 0px 0px 10px #000000;
+-o-box-shadow: 0px 0px 10px #000000;
+box-shadow: 0px 0px 10px #000000;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+border: 2px solid #656565;
+background:#ffffff;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#9b9b9b"); /* Pour IE seulement et mode gradient à linear */
+background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#9b9b9b));
+background: -webkit-linear-gradient(#ffffff, #9b9b9b);
+background: -moz-linear-gradient(#ffffff, #9b9b9b);
+background: -o-linear-gradient(#ffffff, #9b9b9b);
+background: -ms-linear-gradient(#ffffff, #9b9b9b);
+background: linear-gradient(#ffffff, #9b9b9b); 
+}
+
+#connexion {
+
+text-align:right;
+padding-left: 275px;
+}
+
+@font-face
+{
+font-family: DroidSans-Bold;
+src: url('../vue/css/DroidSans-Bold.ttf');
+}
