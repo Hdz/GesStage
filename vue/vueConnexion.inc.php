@@ -13,9 +13,8 @@
 					<td><input type="password" name="mdp" id="mdp"></td>
 					</tr>
 					<td></td>
-					
+					<td><input type="submit" value="Valider"></td>
 				</table></div>
-                                <center><td><input type="submit" value="Valider"></td></center>
 		</form>
 		<?php
 			if (isset($erreurlog)) {

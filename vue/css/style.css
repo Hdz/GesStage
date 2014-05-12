@@ -121,9 +121,33 @@ nav #Accueil{
 }
 article #erreur{
 text-align: center;
+border: 2px solid #999999;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+-moz-box-shadow: 0px 0px 9px #000000;
+-webkit-box-shadow: 0px 0px 9px #000000;
+box-shadow: 0px 0px 9px #000000;
+/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#b2b2b2', endColorstr = '#000000');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#b2b2b2', endColorstr = '#000000')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #8B0000, #8B0000);
+background-image: -ms-linear-gradient(top, #8B0000, #8B0000);
+background-image: -o-linear-gradient(top, #8B0000, #8B0000);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#8B0000), to(#8B0000));
+background-image: -webkit-linear-gradient(top, #8B0000, #8B0000);
+background-image: linear-gradient(top, #8B0000, #8B0000);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
 
 }
-
 article #erreur a:hover{
 	text-decoration: underline;
         
@@ -136,10 +160,8 @@ article .contenu #accP{
 
 /* Coordonnées */
 article .topCoord{
-	padding-left: 275px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-	text-align: right; 
+	margin-left: 225px;
+	 text-align: right; 
 }
 article td{
 	padding-bottom: 10px;
@@ -173,11 +195,6 @@ article .topEnt li{
 article .contenu2{
 	height: 450px;
 }
-
-article .contenu3{
-	height: 350px;
-}
-
 article #stageD{
 	position: relative;
 	width: 400px;
@@ -188,16 +205,6 @@ article #stageG{
 	width: 400px;
 	float: left;
 }
-
-article #stageE{
-	position: relative;
-	width: 400px;
-        padding-left : 275px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-	float: left;
-}
-
 article .contenu2 h3{
 	text-align: center;
 	margin-bottom: 10px;
@@ -228,9 +235,41 @@ background: linear-gradient(#ffffff, #9b9b9b);
 }
 
 #connexion {
-
-text-align:right;
+color: #000000;
+text-align:center;
 padding-left: 275px;
+background-color: #ffffff;
+border: 2px solid #999999;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+-moz-box-shadow: 0px 0px 9px #000000;
+-webkit-box-shadow: 0px 0px 9px #000000;
+box-shadow: 0px 0px 9px #000000;
+/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#b2b2b2', endColorstr = '#000000');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#b2b2b2', endColorstr = '#000000')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #FFFFFF, #FFFFFF);
+background-image: -ms-linear-gradient(top, #FFFFFF, #FFFFFF);
+background-image: -o-linear-gradient(top, #000000, #000000);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#000000), to(#000000));
+background-image: -webkit-linear-gradient(top, #000000, #000000);
+background-image: linear-gradient(top, #000000, #000000);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+/*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
+/*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*All filters must be placed together*/
+
+
 }
 
 @font-face

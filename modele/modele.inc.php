@@ -1,7 +1,7 @@
 <?php
 session_start();
 define('USER','root');
-define('MDP', '');
+define('MDP', 'root');
 define('DSN', 'mysql:host=localhost;dbname=GestionStage');
 
 function connecter() {
@@ -21,27 +21,20 @@ function connecter() {
 function typeUtilisateur($conn, $login){  
     $role= "SELECT ROLE FROM UTILISATEUR WHERE LOGIN='".$login."'";
     $stmt = $conn->query($role);
-    $row= $stmt->fetch();
-    if ($row['ROLE']){
-        $_SESSION['role']=$row['ROLE'];
-    }
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $role;
     
 }
 
 function connexion($conn, $login, $mdp){
-    $sql= "SELECT COUNT(*) nbRes FROM UTILISATEUR WHERE LOGIN='".$login."' AND MOT_DE_PASSE='".$mdp."'"; 
+    $sql= "SELECT COUNT(*) nbRes FROM UTILISATEUR WHERE LOGIN='".$login."' AND MOT_DE_PASSE='".$mdp."'";
     $stmt = $conn->query($sql);
-    //$role= mysql_query("SELECT ROLE FROM UTILISATEUR WHERE LOGIN='".$login."'");    
     $row= $stmt->fetch();
     if ($row['nbRes'] == 1){
         $_SESSION['login']=$login;
-        //$_SESSION['role']=$role;
         header('Location: index.php?action=accueil');
     }else{
         header('Location: index.php?action=erreur');
     }
-    
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -54,7 +47,7 @@ function deconnexion($conn){
 
 function coordonneesUtilisateur(){
 
-    $connexion = mysql_connect('localhost', 'root', '');
+    $connexion = mysql_connect('localhost', 'root', 'root');
 
     mysql_select_db('GestionStage', $connexion) or die("Impossible d'ouvrir la base");
 
@@ -69,14 +62,14 @@ function coordonneesUtilisateur(){
     }
     return $Retour;
 }
-function coordonneesOrganisation($nom){
+function coordonneesOrganisation(){
 
-    $connexion = mysql_connect('localhost', 'root', '');
+    $connexion = mysql_connect('localhost', 'root', 'root');
 
     mysql_select_db('GestionStage', $connexion) or die("Impossible d'ouvrir la base");
 
-    
-    $sql= "SELECT NOM_ORGANISATION, VILLE_ORGANISATION, ADRESSE_ORGANISATION, CP_ORGANISATION, TEL_ORGANISATION, MAIL FROM ORGANISATION WHERE NOM_ORGANISATION ='$nom'";
+  
+    $sql= "SELECT NOM_ORGANISATION, VILLE_ORGANISATION, ADRESSE_ORGANISATION, CP_ORGANISATION, TEL_ORGANISATION, MAIL FROM ORGANISATION";
     $resultat= mysql_query($sql,$connexion);
         while ($ligne=mysql_fetch_assoc($resultat))  {
         $Retour["NOM_ORGANISATION"] = $ligne['NOM_ORGANISATION'];
@@ -88,26 +81,5 @@ function coordonneesOrganisation($nom){
     }
         return $Retour;
 
-}
-
-function majCoordonneesUtilisateur($nom,$prenom,$tel,$email){
-    // On recupere l'identifiant de session
-    $login=$_SESSION['login'];
-    // On se connecte a la base de données
-    $connexion = mysql_connect('localhost', 'root', '');    
-    mysql_select_db('GestionStage', $connexion) or die("Impossible d'ouvrir la base");
-    // La requete recupere le numero identifiant de l'utilisateur
-    $sql= "SELECT IDPERSONNE FROM UTILISATEUR WHERE LOGIN ='$login'";
-    $resultat= mysql_query($sql,$connexion);
-    // On stock le resultat dans la variable $id 
-    while ($li=mysql_fetch_assoc($resultat))  {
-        $id=$li['IDPERSONNE'];
-    }
-    // On met a jour les informations sur la personne grace a son identifiant
-    $sql= "UPDATE PERSONNE
-           SET NOM='$nom', PRENOM='$prenom', NUM_TEL='$tel',ADRESSE_MAIL='$email'
-           WHERE IDPERSONNE='$id'";
-    mysql_query($sql,$connexion);
-    
 }
 ?>

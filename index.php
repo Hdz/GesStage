@@ -26,10 +26,6 @@
         case 'erreur' :
             $page = 'ctrlErreur.inc.php';
             break;
-        case 'utilisateurs' :
-            $page = 'ctrlUtilisateur.inc.php';
-            break;
-                    
         } 
     } else {
         $page = 'ctrlConnexion.inc.php';

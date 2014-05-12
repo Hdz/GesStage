@@ -1,8 +1,15 @@
-<div class="contenue">
+<?php
+        $nomCoor= $res['nom'];
+        $prenomCoor= $res['prenom'];
+        $telCoor= $res['tel'];
+        $addCoor= $res['mail'];
+?>
+
+<div class="contenu">
    <div class="topCoord">
        <table>
            <tr>
-               <td>Nom :<newEmptyPHP</td>
+               <td>Nom :</td>
                <td class="rep"><?php echo $nomCoor; ?></td>
            </tr>
            <tr>
@@ -19,7 +26,7 @@
            </tr>
        </table>
        <div class="separation"></div>
-       <form method="POST" action="">
+       <form action="">
            <table>
                <tr>
                    <td>Nom :</td>

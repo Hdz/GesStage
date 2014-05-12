@@ -1,6 +1,6 @@
 <nav>
         <div class="menuGauche">
-            <ul>                
+            <ul>
                 <li>
                     <a href="index.php?action=accueil">Accueil</a> 
                 </li>
